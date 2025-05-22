@@ -18,8 +18,8 @@ jobs:
 
       - name: Install dependencies
         run: |
-	  cd app
-	  npm install
+          cd app
+          npm install
 
       - name: Run app test
         run: node app/index.js & sleep 3 && curl -I http://localhost:3000
