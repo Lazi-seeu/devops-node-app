@@ -17,7 +17,9 @@ jobs:
           node-version: '18'
 
       - name: Install dependencies
-        run: npm install express
+        run: |
+	  cd app
+	  npm install
 
       - name: Run app test
         run: node app/index.js & sleep 3 && curl -I http://localhost:3000
